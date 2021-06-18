@@ -20,3 +20,5 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+- checkout: git://team_e_p1_webapp
