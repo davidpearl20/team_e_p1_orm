@@ -21,7 +21,7 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- checkout: git://team_e_webapp
+- checkout: git://team_e_p1_webapp
 
 - task: Maven@3
   inputs:
