@@ -21,5 +21,5 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- publish: $(System.DefaultWorkingDirectory)/bin/orm
+- publish: $(System.DefaultWorkingDirectory)
   artifact: orm
