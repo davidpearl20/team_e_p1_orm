@@ -9,12 +9,6 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>Team-e custom ORM</name>
-         
-    <groupId>different_tag</groupId>
-    <artifactId>eorm</artifactId>
-    <version>1.0</version>
-    <packaging>pom</packaging>
-    <name>Team-e custom ORM</name>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
