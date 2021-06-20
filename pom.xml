@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <name>Team-e custom ORM</name>
          
-    <groupId>eteam</groupId>
+    <groupId>different_tag</groupId>
     <artifactId>eorm</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
