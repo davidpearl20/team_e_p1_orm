@@ -44,8 +44,9 @@ jobs:
     inputs:
       Contents: '**/*.jar'
       TargetFolder: '/home/vsts/work/1/s/'
-  - task: PublishBuildArtifacts@1
+  - task: PublishPipelineArtifact@1
     inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-      ArtifactName: 'eteam:eorm:jar:1.0'
-      publishLocation: 'Container'
+     targetPath: '$(Pipeline.Workspace)'
+     artifact: 'eteam:eorm:jar:1.0'
+     publishLocation: 'pipeline'
+  
