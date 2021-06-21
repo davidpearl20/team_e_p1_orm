@@ -63,4 +63,6 @@ steps:
     runOptions: 'inline'
     inline: |
       sudo git clone https://github.com/davidpearl20/team_e_p1_webapp.git
+      cp eorm-1.0.jar team_e_p1_webapp
+      cd eorm-1.0.jar team_e_p1_webapp
     readyTimeout: '20000'
