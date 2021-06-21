@@ -60,6 +60,7 @@ steps:
 - task: SSH@0
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
-    runOptions: 'commands'
-    commands: 'mkdir testdir'
+    runOptions: 'inline'
+    inline: |
+      sudo git clone https://github.com/davidpearl20/team_e_p1_webapp.git
     readyTimeout: '20000'
