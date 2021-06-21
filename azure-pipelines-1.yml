@@ -40,3 +40,10 @@ steps:
     sshEndpoint: 'Flock-of-Hawks-VM'
     contents: '**/*.jar'
     readyTimeout: '20000'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Flock-of-Hawks-VM'
+    runOptions: 'commands'
+    commands: 'echo "hello"'
+    readyTimeout: '20000'
