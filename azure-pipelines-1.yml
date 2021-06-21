@@ -63,7 +63,7 @@ steps:
     runOptions: 'inline'
     inline: |
       sudo git clone https://github.com/davidpearl20/team_e_p1_webapp.git
-      sudo cp eorm-1.0.jar 
+      sudo cp eorm-1.0.jar team_e_p1_webapp
       cd team_e_p1_webapp
       sudo touch madeithere
     readyTimeout: '20000'
