@@ -28,10 +28,6 @@ jobs:
       SourceFolder: $(system.defaultworkingdirectory)
       Contents: '**/*.jar'
       TargetFolder: $(build.artifactstagingdirectory)
-  - task: PublishPipelineArtifact@1
-    displayName: Publish Pipeline Artifact
-    inputs:
-      artifactName: 'eorm'
   - task: DownloadPipelineArtifact@2
     displayName: Download Pipeline Artifact
     inputs:
