@@ -60,6 +60,8 @@ steps:
 - task: SSH@0
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
-    runOptions: 'commands'
-    commands: 'git clone https://github.com/davidpearl20/team_e_p1_webapp.git'
+    runOptions: 'inline'
+    inline: |
+      cd dajpearl
+      sudo git clone https://github.com/davidpearl20/team_e_p1_webapp.git
     readyTimeout: '20000'
