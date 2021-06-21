@@ -28,4 +28,5 @@ steps:
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
     contents: '**/*.jar'
+    targetFolder: 'dajpearl'
     readyTimeout: '20000'
