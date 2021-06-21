@@ -50,3 +50,12 @@ steps:
       cp eorm-1.0.jar ..
       cd ..
     readyTimeout: '20000'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Flock-of-Hawks-VM'
+    runOptions: 'inline'
+    inline: |
+      sudo apt install maven
+      y
+    readyTimeout: '20000'
