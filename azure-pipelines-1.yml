@@ -55,7 +55,7 @@ steps:
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
     runOptions: 'commands'
-    commands: 'sudo apt install maven -y'
+    commands: 'sudo apt-get install maven -y'
     readyTimeout: '20000'
 - task: SSH@0
   inputs:
