@@ -61,5 +61,5 @@ steps:
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
     runOptions: 'commands'
-    commands: 'cd dajpearl'
+    commands: 'mkdir testdir'
     readyTimeout: '20000'
