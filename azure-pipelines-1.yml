@@ -17,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: InstallSSHKey@0
+  inputs:
+    knownHostsEntry: |
+      52.191.131.160 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN6CYxqbIv+PWd4tWwxKZyMmUmjmRzyU7Iyq1rQ3G01x
+      52.191.131.160 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHZE8uSHYYJOBww4eQxgfMl89kuqc+SuzrdAEx176Kgc0yMF6yXXXUSio+MJiZNg0wh9io0eqywUUf+5FM9/Y9gx4I/MImg8hs99lRxT/c5z5epPO9RAhJRVorqN0JgjUXZP8kQa7+YSu2ESXfqJz5LAOEF8bPBGfz1froaXxhYdD8qrZ4aetVcaUZq6Z/t3Ezugzg3i3DQ9EpzXA9DtO0j13qSfWfiQNFbD9nVLIkMyO7iNgHAYqi91bvZhSNBUxqECtyiczT/iqi+5oM50n2/P96aBuCKACZmDLW03ONK3J2szIzate1KeGQCD28KzArB1YqtY9lyOC3Me32lDAR
+      52.191.131.160 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGlYO103SfmfPCgKf1VHEzMvo/bg6YPy4qRqk+fWl9IQcovdpkN6FVkAIQ/UlEyUgB3C74TLcurmJbE8gtkSxkg=
+    sshKeySecureFile: 'Flock-of-Hawks-VM_key.pem'
