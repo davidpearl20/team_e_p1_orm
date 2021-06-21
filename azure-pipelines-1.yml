@@ -66,4 +66,5 @@ steps:
       sudo cp eorm-1.0.jar team_e_p1_webapp
       cd team_e_p1_webapp
       sudo touch madeithere
+    failOnStdErr: false
     readyTimeout: '20000'
