@@ -51,3 +51,9 @@ jobs:
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: 'pkgs.dev.azure.com/revature-training-uta/24909f86-8d03-4826-8947-55d471b47b72/_packaging/webapp/maven/v1'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+     ArtifactName: 'eorm'
+     publishLocation: 'Container'
