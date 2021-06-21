@@ -14,6 +14,9 @@ jobs:
     vmImage: ubuntu-16.04
   steps:
   - checkout: self
+  - task: MavenAuthenticate@0
+    inputs:
+      artifactsFeeds: 'webapp'
   - task: Maven@3
     displayName: Maven pom.xml
     inputs:
