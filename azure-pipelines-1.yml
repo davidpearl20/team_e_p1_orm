@@ -37,5 +37,13 @@ steps:
     inline: |
       sudo git clone https://github.com/davidpearl20/team_e_p1_orm.git
       sudo git clone https://github.com/davidpearl20/team_e_p1_webapp.git
+      cd team_1_p1_orm
+      sudo mvn compile
+      sudo mvn install
+      sudo mvn package
+      cd ../team_e_p1_webapp
+      sudo mvn compile
+      sudo mvn install
+      sudo mvn package
     failOnStdErr: false
     readyTimeout: '20000'
