@@ -45,7 +45,6 @@ steps:
       sudo mvn compile
       sudo mvn install
       sudo mvn package
-      sudo apt-get install tomcat9 tomcat9-admin -y
-      sudo ufw allow from any to any port 8080 proto tcp
+      sudo apt-get install tomcat9
     failOnStdErr: false
     readyTimeout: '20000'
