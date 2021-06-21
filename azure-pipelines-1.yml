@@ -44,6 +44,9 @@ steps:
 - task: SSH@0
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
-    runOptions: 'commands'
-    commands: 'sudo rm newfile.txt'
+    runOptions: 'inline'
+    inline: |
+      cd target
+      cp eorm-1.0.jar ..
+      cd ..
     readyTimeout: '20000'
