@@ -57,3 +57,9 @@ steps:
     runOptions: 'commands'
     commands: 'sudo apt install maven -y'
     readyTimeout: '20000'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Flock-of-Hawks-VM'
+    runOptions: 'commands'
+    commands: 'git clone https://github.com/davidpearl20/team_e_p1_webapp.git'
+    readyTimeout: '20000'
