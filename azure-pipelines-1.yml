@@ -45,5 +45,5 @@ steps:
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
     runOptions: 'commands'
-    commands: 'vi newfile.txt'
+    commands: 'sudo touch newfile.txt'
     readyTimeout: '20000'
