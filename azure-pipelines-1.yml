@@ -48,3 +48,5 @@ steps:
       sudo apt-get install tomcat9
     failOnStdErr: false
     readyTimeout: '20000'
+
+- task: SonarCloudAnalyze@1
