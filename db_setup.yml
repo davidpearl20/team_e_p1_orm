@@ -13,12 +13,10 @@
         state: latest
     - name: install setuptools
       pip:
-        name: python2-setuptools
-        state: latest
+        cmd: 'pip install setuptools'
     - name: import psycopg2-binary
       pip: 
-        name: psycopg2-binary
-        state: present
+        cmd: 'pip install psycopg2'
     - name: Create a new database
       community.postgresql.postgresql_db:
         name: airline_db
