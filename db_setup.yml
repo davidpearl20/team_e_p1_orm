@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Create a new database
+      community.postgresql.postgresql_db:
+        name: airline_db
+        
