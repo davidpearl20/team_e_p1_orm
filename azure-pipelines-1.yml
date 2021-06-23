@@ -65,18 +65,6 @@ steps:
       sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
       sudo apt-get update
       sudo apt-get install postgresql postgresql-contrib -y
-    readyTimeout: '20000'
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'Flock-of-Hawks-VM'
-    runOptions: 'commands'
-    commands: 'sudo apt-get install python-psycopg2 -y'
     failOnStdErr: false
     readyTimeout: '20000'
-- task: Ansible@0
-  inputs:
-    ansibleInterface: 'agentMachine'
-    playbookPathOnAgentMachine: './db_setup.yml'
-    inventoriesAgentMachine: 'file'
-    inventoryFileOnAgentMachine: './inventory'
-    sudoEnabled: true
+
