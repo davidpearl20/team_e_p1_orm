@@ -5,4 +5,4 @@
       ansible.builtin.package:
         name: 
           - maven
-          - psycopg2
+          - python3-psycopg2
