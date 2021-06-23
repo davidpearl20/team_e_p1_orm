@@ -65,8 +65,6 @@ steps:
       sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
       sudo apt-get update
       sudo apt-get install postgresql postgresql-contrib -y
-      sudo su - postgres
-      psql
     readyTimeout: '20000'
 - task: SSH@0
   inputs:
