@@ -46,5 +46,5 @@ steps:
       sudo mvn compile
       sudo mvn install
       sudo mvn package
-    
+    failOnStdErr: false
     readyTimeout: '20000'
