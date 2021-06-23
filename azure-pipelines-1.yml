@@ -72,7 +72,7 @@ steps:
 - task: Ansible@0
   inputs:
     ansibleInterface: 'agentMachine'
-    playbookPathOnAgentMachine: './db_setup.yml'
+    playbookPathOnAgentMachine: './new_db_setup.yml'
     inventoriesAgentMachine: 'file'
     inventoryFileOnAgentMachine: './inventory'
     sudoEnabled: true
