@@ -2,17 +2,7 @@
 - hosts: all
   become: yes
 
-  tasks:
-    - name: install pip3
-      package:
-        name: python3-pip
-        state: latest
-    - name: install setuptools
-      ansible.builtin.command:
-        cmd: 'pip3 install --upgrade pip setuptools'
-    - name: install psychopg2
-      ansible.builtin.command:
-        cmd: 'sudo pip3 install python3-psycopg2 -y'
+  tasks:    
     - name: Create a new database
       community.postgresql.postgresql_db:
         name: airline_db
