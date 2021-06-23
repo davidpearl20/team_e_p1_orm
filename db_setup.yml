@@ -10,8 +10,9 @@
     - name: install setuptools
       ansible.builtin.command:
         cmd: 'pip3 install --upgrade pip setuptools'
-    - name: install setuptools
+    - name: navigate to python folder
       ansible.builtin.command:
+        cmd: 'cd /usr/bin/python'
         cmd: 'pip3 install psycopg2'
     - name: Create a new database
       community.postgresql.postgresql_db:
