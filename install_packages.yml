@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: install packages
+      ansible.builtin.package:
+        name: 
+          - maven
+          - psycopg2
