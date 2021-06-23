@@ -10,12 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Ansible@0
-  inputs:
-    ansibleInterface: 'agentMachine'
-    playbookPathOnAgentMachine: './install_packages.yml'
-    inventoriesAgentMachine: 'file'
-    inventoryFileOnAgentMachine: './inventory'
+
 - task: InstallSSHKey@0
   inputs:
     knownHostsEntry: |
@@ -60,7 +55,12 @@ steps:
             sudo mvn install tomcat7:deploy
     failOnStdErr: false
     readyTimeout: '20000'
-
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Flock-of-Hawks-VM'
+    runOptions: 'commands'
+    commands: 'sudo apt-get install postgresql-12 -y'
+    readyTimeout: '20000'
 - task: SSH@0
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
