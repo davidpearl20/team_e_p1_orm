@@ -10,9 +10,6 @@
     - name: install setuptools
       ansible.builtin.command:
         cmd: 'pip3 install --upgrade pip setuptools'
-    - name: install psycopg2
-      ansible.builtin.command:
-        cmd: 'pip3 install psycopg2-binary'
     - name: Create a new database
       community.postgresql.postgresql_db:
         name: airline_db
