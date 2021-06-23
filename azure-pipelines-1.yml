@@ -65,7 +65,7 @@ steps:
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
     runOptions: 'commands'
-    commands: 'sudo apt-get install psycopg2'
+    commands: 'sudo apt-get install python3-psycopg2'
     failOnStdErr: false
     readyTimeout: '20000'
 - task: Ansible@0
