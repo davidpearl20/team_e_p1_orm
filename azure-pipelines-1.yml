@@ -61,16 +61,18 @@ steps:
             sudo mvn install tomcat7:deploy
     failOnStdErr: false
     readyTimeout: '20000'
+
 - task: SSH@0
   inputs:
     sshEndpoint: 'Flock-of-Hawks-VM'
     runOptions: 'commands'
-    commands: 'sudo apt-get install python3 -y'
-    readyTimeout: '20000'
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'Flock-of-Hawks-VM'
-    runOptions: 'commands'
-    commands: 'sudo apt-get install python3-psycopg2 -y'
+    commands: 'sudo apt-get install python-psycopg2 -y'
     failOnStdErr: false
     readyTimeout: '20000'
+- task: Ansible@0
+  inputs:
+    ansibleInterface: 'agentMachine'
+    playbookPathOnAgentMachine: './db_setup.yml'
+    inventoriesAgentMachine: 'file'
+    inventoryFileOnAgentMachine: './inventory'
+    sudoEnabled: true
