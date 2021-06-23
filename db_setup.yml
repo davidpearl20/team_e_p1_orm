@@ -10,9 +10,6 @@
     - name: install setuptools
       ansible.builtin.command:
         cmd: 'pip3 install --upgrade pip setuptools'
-    - name: navigate to python folder
-      ansible.builtin.command:
-        cmd: 'cd /usr/bin/python'
     - name: install psycopg2
       ansible.builtin.command:
         cmd: 'pip3 install psycopg2-binary'
