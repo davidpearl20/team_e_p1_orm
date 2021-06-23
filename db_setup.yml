@@ -3,6 +3,15 @@
   become: yes
 
   tasks:
+    - name: install pip
+      package:
+        name: python3-pip
+        state: latest
+        
+    - name: import psycopg2
+      pip: psycopg2
+      state: present
+
     - name: Create a new database
       community.postgresql.postgresql_db:
         name: airline_db
