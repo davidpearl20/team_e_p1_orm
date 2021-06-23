@@ -9,7 +9,7 @@
         state: latest
     - name: import psycopg2-binary
       pip: psycopg2
-      state: present
+        state: present
     - name: Create a new database
       community.postgresql.postgresql_db:
         name: airline_db
