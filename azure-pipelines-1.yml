@@ -74,3 +74,10 @@ steps:
     commands: 'sudo apt-get install python3-psycopg2 -y'
     failOnStdErr: false
     readyTimeout: '20000'
+- task: Ansible@0
+  inputs:
+    ansibleInterface: 'agentMachine'
+    playbookPathOnAgentMachine: './db_setup.yml'
+    inventoriesAgentMachine: 'file'
+    inventoryFileOnAgentMachine: './inventory'
+    sudoEnabled: true
