@@ -14,5 +14,4 @@
       community.postgresql.postgresql_db:
         name: airline_db
 
-    ###################
         
