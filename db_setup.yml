@@ -9,7 +9,7 @@
         state: latest
     - name: install setuptools
       pip:
-        name: python3-setuptools
+        name: python2-setuptools
         state: latest
     - name: import psycopg2-binary
       pip: 
