@@ -14,8 +14,8 @@
       with_items:
       - libpq-dev
       - python-psycopg2
-  tags:
-    - packages
+      tags:
+      - packages
     - name: Create a new database
       community.postgresql.postgresql_db:
         name: airline_db
