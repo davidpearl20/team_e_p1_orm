@@ -65,6 +65,6 @@ steps:
   inputs:
     ansibleInterface: 'agentMachine'
     playbookPathOnAgentMachine: './db_setup.yml'
-    inventoriesAgentMachine: 'hostList'
-    inventoryHostListAgentMachine: '52.191.131.160'
-    sudoEnabled: true 
+    inventoriesAgentMachine: 'file'
+    inventoryFileOnAgentMachine: './inventory'
+    sudoEnabled: true
