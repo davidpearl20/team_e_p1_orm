@@ -7,6 +7,10 @@
       package:
         name: python3-pip
         state: latest
+    - name: install setuptools
+      pip:
+        name: python3-setuptools
+        state: latest
     - name: import psycopg2-binary
       pip: 
         name: psycopg2-binary
