@@ -8,10 +8,10 @@
         name: python3-pip
         state: latest
     - name: install setuptools
-      pip:
+      ansible.builtin.command:
         cmd: 'pip install setuptools'
     - name: import psycopg2-binary
-      pip: 
+      ansible.builtin.command:
         cmd: 'pip install psycopg2'
     - name: Create a new database
       community.postgresql.postgresql_db:
