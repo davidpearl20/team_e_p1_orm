@@ -48,3 +48,16 @@ steps:
       sudo mvn package
     failOnStdErr: false
     readyTimeout: '20000'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'Flock-of-Hawks-VM'
+    runOptions: 'inline'
+    inline: |
+      sudo cp /home/dajpearl/team_e_p1_webapp/target/p1-webapp-0.9.war  /var/lib/tomcat8/webapps
+            cd /usr/share/tomcat8/bin
+            sudo mkdir /usr/share/tomcat8/logs
+            sudo ./catalina.sh start
+            cd /home/dajpearl/team_e_p1_webapp
+            mvn install tomcat:deploy
+    failOnStdErr: false
+    readyTimeout: '20000'
