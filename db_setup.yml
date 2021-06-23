@@ -9,7 +9,7 @@
         state: latest
     - name: install setuptools
       ansible.builtin.command:
-        cmd: 'pip install setuptools'
+        cmd: 'pip3 install --upgrade pip setuptools'
     - name: import psycopg2-binary
       ansible.builtin.command:
         cmd: 'pip install psycopg2'
